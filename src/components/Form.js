@@ -1,29 +1,29 @@
 import Input from "./Input";
 import React, { useState } from "react";
 
-export default function Formulario({ onAgregarCita }) {
+export default function Form({ onAgregarCita }) {
     const [idState, setId] = useState(0);
-    const CrearCita = (e) => {
-        e.preventDefault();
+    const CrearCita = (event) => {
+        event.preventDefault();
         let newCita = {
             id: idState,
-            NombreMascota: e.target.mascota.value,
-            NombreDueno: e.target.propietario.value,
-            fecha: e.target.fecha.value,
-            hora: e.target.hora.value,
-            sintomas: e.target.sintomas.value
+            NombreMascota: event.target.mascota.value,
+            NombreDueno: event.target.propietario.value,
+            fecha: event.target.fecha.value,
+            hora: event.target.hora.value,
+            sintomas: event.target.sintomas.value
         }
         setId(idState + 1)
-        e.target.mascota.value = ''
-        e.target.propietario.value = ''
-        e.target.fecha.value = ''
-        e.target.hora.value = ''
-        e.target.sintomas.value = ''
+        event.target.mascota.value = ''
+        event.target.propietario.value = ''
+        event.target.fecha.value = ''
+        event.target.hora.value = ''
+        event.target.sintomas.value = ''
         onAgregarCita(newCita);
     }
     return (
         <>
-            <form onSubmit={(e) => CrearCita(e)}>
+            <form onSubmit={(event) => CrearCita(event)}>
                 <Input type="text" name="mascota" placeholder="Nombre de la mascota" required className="u-full-width" title="Nombre de la Mascota" />
                 <Input type="text" name="propietario" placeholder="Nombre del Dueño de la Mascota" required className="u-full-width" title="Nombre del Dueño de la Mascota" />
                 <Input type="date" name="fecha" className="u-full-width" title="Fecha" />

@@ -1,5 +1,5 @@
 import './App.css';
-import Formulario from "./components/Formulario";
+import Form from "./components/Form";
 import ListaCitas from "./components/ListaCitas";
 import React, { useState } from "react";
 
@@ -20,15 +20,15 @@ function App() {
   }
   return (
     <>
-      <h1>Patient Manager</h1>
+      <h1>Administrador de Citas</h1>
       <div className="container">
         <div className="row">
           <div className="one-half column">
-            <h2>Create My Date</h2>
-            <Formulario onAgregarCita={AgregarCita} />
+            <h2>Crear una cita</h2>
+            <Form onAgregarCita={AgregarCita} />
           </div>
           <div className="one-half column">
-            <h2>Create My Date</h2>
+            <h2>Citas</h2>
             <ListaCitas lista={citas} onBorrarCita={BorrarCita} />    
           </div>
         </div>

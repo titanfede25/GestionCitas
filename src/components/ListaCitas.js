@@ -1,11 +1,11 @@
 import Cita from "./Cita";
 
-export default function ListsCitas({ lista, onBorrarCita }) {
+export default function ListaCitas({ lista, onBorrarCita }) {
     return (
         <>
             {lista.map((item, index) => (
                 <>
-                    <Cita obj={item} key={index} onBorrarCita={onBorrarCita} />
+                    <Cita objeto={item} key={index} onBorrarCita={onBorrarCita} />
                 </>
             ))}
         </>
