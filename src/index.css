@@ -58,7 +58,9 @@ input[type="time"] {
   border-bottom: 1px solid #e1e1e1;
   color: black;
 }
-
+.button.eliminar{
+  background-color: #c10059;
+}
 .cita p {
   font-weight: bold;
   margin-bottom: .8rem;

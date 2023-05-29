@@ -7,8 +7,8 @@ export default function Formulario({ onAgregarCita }) {
         e.preventDefault();
         let newCita = {
             id: idState,
-            nomMascota: e.target.mascota.value,
-            nomDueno: e.target.propietario.value,
+            NombreMascota: e.target.mascota.value,
+            NombreDueno: e.target.propietario.value,
             fecha: e.target.fecha.value,
             hora: e.target.hora.value,
             sintomas: e.target.sintomas.value
@@ -24,13 +24,13 @@ export default function Formulario({ onAgregarCita }) {
     return (
         <>
             <form onSubmit={(e) => CrearCita(e)}>
-                <Input type="text" name="mascota" placeholder="Nombre Mascota" required className="u-full-width" title="Nombre Mascota" />
-                <Input type="text" name="propietario" placeholder="Nombre dueño de la mascota" required className="u-full-width" title="Nombre Dueño" />
+                <Input type="text" name="mascota" placeholder="Nombre de la mascota" required className="u-full-width" title="Nombre de la Mascota" />
+                <Input type="text" name="propietario" placeholder="Nombre del Dueño de la Mascota" required className="u-full-width" title="Nombre del Dueño de la Mascota" />
                 <Input type="date" name="fecha" className="u-full-width" title="Fecha" />
-                <Input type="time" name="hora" placeholder="" className="u-full-width" title="hora" />
-                <label>Sintomas</label>
+                <Input type="time" name="hora" placeholder="" className="u-full-width" title="Hora" />
+                <label>Síntomas</label>
                 <textarea name="sintomas" className="u-full-width"></textarea>
-                <button type="submit" className="u-full-width button-primary">Agregar Cita</button>
+                <button type="submit" className="u-full-width button-primary">Añadir Cita</button>
             </form>
         </>
     )

@@ -20,15 +20,15 @@ function App() {
   }
   return (
     <>
-      <h1>Administrador de Pacientes</h1>
+      <h1>Patient Manager</h1>
       <div className="container">
         <div className="row">
           <div className="one-half column">
-            <h2>Crear mi Cita</h2>
+            <h2>Create My Date</h2>
             <Formulario onAgregarCita={AgregarCita} />
           </div>
           <div className="one-half column">
-            <h2>Crear mi Cita</h2>
+            <h2>Create My Date</h2>
             <ListaCitas lista={citas} onBorrarCita={BorrarCita} />    
           </div>
         </div>
