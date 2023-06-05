@@ -24,14 +24,20 @@ export default function Form({ onAgregarCita }) {
     return (
         <>
             <form onSubmit={(event) => CrearCita(event)}>
-                <Input type="text" name="mascota" placeholder="Nombre de la mascota" required className="u-full-width" title="Nombre de la Mascota" />
-                <Input type="text" name="propietario" placeholder="Nombre del Dueño de la Mascota" required className="u-full-width" title="Nombre del Dueño de la Mascota" />
-                <Input type="date" name="fecha" className="u-full-width" title="Fecha" />
-                <Input type="time" name="hora" placeholder="" className="u-full-width" title="Hora" />
+                <div>
+                <Input type="text"  name="mascota" placeholder="Nombre de la mascota"  className="u-full-width"  title="Nombre de la Mascota" />
+                </div>
+                <Input type="text"  name="propietario" placeholder="Nombre del Dueño de la Mascota"  className="u-full-width" title="Nombre del Dueño de la Mascota" />
+                <Input type="date" name="fecha"  className="u-full-width" title="Fecha" />
+                <Input type="time" name="hora" placeholder=""  className="u-full-width" title="Hora" />
                 <label>Síntomas</label>
-                <textarea name="sintomas" className="u-full-width"></textarea>
+                <textarea name="sintomas" required className="u-full-width"></textarea>
                 <button type="submit" className="u-full-width button-primary">Añadir Cita</button>
             </form>
         </>
     )
 }
+
+
+
+      
