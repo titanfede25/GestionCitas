@@ -1,5 +1,13 @@
-import Input from "./Input";
 import React, { useState } from "react";
+
+function Input({ type, name, placeholder = "", title }) {
+    return (
+      <>
+        <label>{title}</label>
+        <input type={type} name={name} required className="u-full-width" placeholder={placeholder} />
+      </>
+    )
+  }
 
 export default function Form({ onAgregarCita }) {
     const [idState, setId] = useState(0);
